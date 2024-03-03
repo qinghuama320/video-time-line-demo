@@ -1,0 +1,107 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  
+}
+
+.app {
+  text-align: center;
+  background-color: #302c2c;
+  margin-bottom: 5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.tracks_wrap {
+  padding: 20px 0;
+}
+
+.track{
+  /* border: 1px dotted pink; */
+  min-width: calc(100% - 30px);
+  height: 40px;
+  margin: 10px 10px;
+  background-color: #4a4c4e;
+  list-style: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+
+  position: relative;
+  overflow: auto;
+}
+
+.clip {
+  color: rgb(250, 82, 52);
+  border-radius: 5px;
+  background-color: white;
+  
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  user-select: none;
+}
+
+.clip_inner {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  line-height: 24px;
+}
+
+.clip .move-line {
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: blue;
+  top: 0;
+  display: none;
+  cursor: ew-resize;
+}
+.clip .left-line {
+  left: 0;
+}
+.clip .right-line {
+  right: 0;
+}
+
+.clip .remove {
+  display: none;
+  position: absolute;
+  width: 16px;
+  line-height: 16px;
+  font-size: 16px;
+  right: -2px;
+  top: -2px;
+}
+
+.clip:hover .move-line, .clip:active .move-line, .clip:hover .remove {
+  display: inline-block;
+}
+
+.btn_wrap {
+  text-align: center;
+  position: relative;
+}
+
+.clip_button {
+  font-size: 1rem;
+  color: rgb(250, 82, 52);
+  box-shadow: 0px 2px 4px #4a4c4e;
+  border-radius: 5px;
+  padding: 0.3em 0.5em;
+  background-color: white;
+  text-align: center;
+  margin: 5px;
+  border: 1px solid transparent;
+
+  position: absolute;
+  transform: translateX(-50%);
+}
